@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply max-w-[140rem] mx-auto p-[1.5rem];
+}
+
+@layer components{
+    .header{
+        @apply relative;
+    }
+    .header__wrapper{
+        @apply flex items-center justify-between lg:max-w-[140rem];
+    }
+    .header__nav{
+        @apply hidden lg:block ;
+    }
+    .header__nav ul{
+        @apply flex gap-8 font-semibold lg:text-center text-gray-500;
+    }
+    .header__nav ul li{
+        @apply hover:scale-[1.05] transition-all;
+    }
+    .toggle__menu{
+        @apply bg-grey rounded-full px-[.8rem] py-[1rem] lg:hidden;
+    }
+    .toggle__menu span{
+        @apply w-[1.5rem] h-[.15rem] bg-dark block rounded-full;
+    }
+    .toggle__menu span:nth-child(2){
+        @apply my-[.3rem];
+    }
+    .toggle__menu.open span:first-child{
+        @apply translate-x-0 translate-y-[9px] rotate-[225deg] transition-[.5s] ease-in-out;
+    }
+    .toggle__menu.open span:nth-child(2){
+        @apply opacity-0  transition-[.5s] ease-in-out;
+    }
+    .toggle__menu.open span:last-child{
+        @apply translate-x-0 translate-y-[-6px] rotate-[-225deg]  transition-[.5s] ease-in-out;
+    }
+    .header__actions{
+        @apply absolute bg-light  top-[6.05rem] left-0 w-full max-h-0 overflow-hidden transition-all lg:relative lg:max-h-fit lg:bg-transparent lg:top-0 lg:w-[12rem];
+    }
+    .header__actions.open{
+        @apply max-h-[50rem] transition-all border-t-2;
+    }
+    .header__actions ul{
+        @apply lg:hidden
+    }
+    .header__actions ul li{
+        @apply pt-[1.5rem] px-[1.5rem];
+    }
+    .header__actions ul li a{
+        @apply text-[1.5rem] font-semibold text-gray-400;
+    }
+    .header__download{
+        @apply mx-[1.5rem] my-[3rem] lg:my-0;
+    }
+    .header__download a{
+        @apply inline-block px-[1rem] py-[.5rem] bg-primary w-full rounded-full 
+        text-center text-light text-[1.5rem] font-semibold hover:scale-[1.05] transition-all;
+    }
+}
+
+@layer components{
+  .banner__text h1{
+    @apply text-center text-graay text-[2.5rem] font-bold pt-[.7rem] lg:text-[5rem];
+  }
+  .banner__text span{
+    @apply text-primary;
+  }
+  .banner__text p{
+    @apply text-center font-medium text-graay text-[1rem] pb-[4rem] 
+    mx-20 lg:text-[2rem] lg:font-normal lg:w-[45rem] lg:mx-auto;
+  }
+  .image{
+    @apply flex justify-center;
+  }
+  .image img{
+    @apply w-[26.5rem] rounded-[1.5rem] hover:scale-[1.05] 
+    transition-all lg:w-[70rem];
+  }
+  .banner__text2 h2{
+    @apply text-center text-graay text-[2.5rem] font-bold 
+    pt-[.7rem] w-[20rem] mx-auto mt-[1.5rem] lg:w-[26.5rem] lg:text-[5rem] lg:w-[45rem] lg:mx-auto;
+  }
+  .banner__download{
+    @apply flex justify-center
+  }
+  .banner__download a{
+    @apply mt-[1rem] inline-block px-[1rem] py-[.5rem] bg-primary w-[10rem] rounded-full 
+    text-center text-light text-[1.2rem] font-semibold hover:scale-[1.05] transition-all lg:py-[1rem] lg:text-[1.5rem];
+}
+
+}
