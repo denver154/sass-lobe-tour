@@ -300,26 +300,30 @@
      .seven__all{
          @apply lg:grid lg:grid-cols-2 lg:max-w-[78rem] lg:m-auto;
      }
+   
      .seven{
          @apply bg-grey;
      }
      .seven__image{
-         @apply bg-white rounded-[2rem] mb-[2rem] lg:w-[37rem] ;
+         @apply bg-white rounded-[2rem] mb-[2rem] lg:w-[37rem] transition-all hover:scale-[1.02];
      }
      .seven__image img{
          @apply rounded-t-[2rem] lg:w-[37rem];
      }
      .seven__text{
-         @apply m-[1.5rem];
+         @apply m-[1.5rem] px-5 py-7;
      }
      .seven__text h1{
-         @apply  text-[1.2rem] font-semibold text-graay lg:text-[1.5rem] pb-[1rem];
+         @apply  text-[1.2rem] font-semibold text-graay lg:text-[1.5rem] pb-[1rem] cursor-pointer;
      }
      .seven__text p{
-         @apply text-[1.1rem] text-graay pb-[2rem] lg:w-[35rem] lg:text-[1.5rem]; 
+         @apply text-[1.1rem] text-graay pb-[2rem] lg:w-[35rem] lg:text-[1.5rem] cursor-pointer; 
      }
      .seven__text a{
-        @apply text-gry;
+        @apply pb-[2rem] text-gry;
+     }
+     .sevently{
+        @apply lg:flex lg:justify-center;
      }
  
  }

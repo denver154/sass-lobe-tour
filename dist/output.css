@@ -1476,6 +1476,15 @@ video {
   border-radius: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.seven__image:hover {
+  --tw-scale-x: 1.02;
+  --tw-scale-y: 1.02;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 1024px) {
@@ -1497,9 +1506,14 @@ video {
 
 .seven__text {
   margin: 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 .seven__text h1 {
+  cursor: pointer;
   padding-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
@@ -1514,6 +1528,7 @@ video {
 }
 
 .seven__text p {
+  cursor: pointer;
   padding-bottom: 2rem;
   font-size: 1.1rem;
   --tw-text-opacity: 1;
@@ -1528,8 +1543,16 @@ video {
 }
 
 .seven__text a {
+  padding-bottom: 2rem;
   --tw-text-opacity: 1;
   color: rgb(200 200 200 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .sevently {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .visible {
